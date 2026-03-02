@@ -1,0 +1,36 @@
+<div style="padding: 20px; background-color: #f8f9fa; border-radius: 8px; margin: 20px 0;">
+  <h2 style="color: #007bff; margin-bottom: 20px;">🔐 New Login Detected</h2>
+  
+  <p>Hello <%= merchantName %>,</p>
+  
+  <p>We detected a new login to your sBTC Payment Gateway account. Here are the details:</p>
+  
+  <div style="background-color: #e7f3ff; border: 1px solid #b8daff; border-radius: 4px; padding: 15px; margin: 20px 0;">
+    <h3 style="color: #004085; margin-top: 0;">Login Details</h3>
+    <p style="margin: 5px 0;"><strong>Time:</strong> <%= new Date(timestamp).toLocaleString() %></p>
+    <p style="margin: 5px 0;"><strong>IP Address:</strong> <%= ipAddress %></p>
+    <p style="margin: 5px 0;"><strong>Device/Browser:</strong> <%= userAgent.substring(0, 100) %><%= userAgent.length > 100 ? '...' : '' %></p>
+  </div>
+
+  <p>If this was you, no action is needed. If you don't recognize this login activity, please:</p>
+  
+  <ol>
+    <li>Change your password immediately</li>
+    <li>Review your account activity</li>
+    <li>Enable two-factor authentication if you haven't already</li>
+    <li>Contact our support team</li>
+  </ol>
+
+  <div style="text-align: center; margin: 30px 0;">
+    <a href="<%= baseUrl %>/dashboard/security" 
+       style="background-color: #007bff; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; display: inline-block;">
+      Review Security Settings
+    </a>
+  </div>
+
+  <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #dee2e6;">
+    <p style="color: #6c757d; font-size: 14px; margin: 0;">
+      This is an automated security notification from sBTC Payment Gateway.
+    </p>
+  </div>
+</div>

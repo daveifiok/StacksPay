@@ -1,0 +1,39 @@
+<h2>Two-Factor Authentication Setup 🔐</h2>
+
+<p>Hi <%= merchantName %>,</p>
+
+<p>You've successfully enabled Two-Factor Authentication (2FA) for your sBTC Payment Gateway account. This adds an extra layer of security to protect your account and funds.</p>
+
+<p><strong>Setup Complete:</strong></p>
+<ul style="margin: 20px 0; padding-left: 20px;">
+    <li>✅ Authenticator app configured</li>
+    <li>✅ Backup codes generated</li>
+    <li>✅ 2FA is now active</li>
+</ul>
+
+<p><strong>Your Backup Codes:</strong></p>
+<div class="warning">
+    <strong>🚨 Important:</strong> Save these backup codes in a secure location. 
+    You can use them to access your account if you lose access to your authenticator app.
+</div>
+
+<div class="code-block">
+<% backupCodes.forEach(function(code, index) { %>
+<%= index + 1 %>. <%= code %><br>
+<% }); %>
+</div>
+
+<p><strong>Security Reminders:</strong></p>
+<ul style="margin: 20px 0; padding-left: 20px;">
+    <li>Keep your backup codes secure and private</li>
+    <li>Each backup code can only be used once</li>
+    <li>You can generate new backup codes anytime from your dashboard</li>
+    <li>Don't share your authenticator app or codes with anyone</li>
+</ul>
+
+<p>From now on, you'll need to provide a code from your authenticator app when logging in. This significantly increases the security of your account.</p>
+
+<p>If you didn't enable 2FA or have concerns about your account security, please contact our support team immediately.</p>
+
+<p>Stay secure!<br>
+The sBTC Payment Gateway Team</p>

@@ -1,0 +1,41 @@
+<h2>Account Linking Request 🔗</h2>
+
+<p>Hi <%= merchantName %>,</p>
+
+<p>We've received a request to link your sBTC Payment Gateway account with an existing account using this email address.</p>
+
+<div class="warning">
+    <strong>🔐 Account Linking Details:</strong><br>
+    <strong>Primary Account:</strong> <%= primaryAccount.businessName %> (<%= primaryAccount.email %>)<br>
+    <strong>Secondary Account:</strong> <%= secondaryAccount.businessName %> (<%= secondaryAccount.email %>)<br>
+    <strong>Login Method:</strong> <%= linkingMethod %>
+</div>
+
+<p><strong>What happens when you link accounts?</strong></p>
+<ul style="margin: 20px 0; padding-left: 20px;">
+    <li>Your payment history and transaction data will be merged</li>
+    <li>API keys from both accounts will remain active</li>
+    <li>You'll be able to log in using any linked authentication method</li>
+    <li>All business settings will be preserved from your primary account</li>
+</ul>
+
+<p>To complete the account linking process, click the button below:</p>
+
+<a href="<%= confirmationUrl %>" class="btn">Confirm Account Linking</a>
+
+<p>Or copy and paste this link into your browser:</p>
+<div class="code-block"><%= confirmationUrl %></div>
+
+<div class="warning">
+    <strong>⏰ Important:</strong> This linking confirmation will expire in 24 hours for security reasons. 
+    If you don't confirm within this time, you'll need to initiate the linking process again.
+</div>
+
+<p><strong>Security Note:</strong></p>
+<p>If you didn't request this account linking, please ignore this email and consider updating your account password. The linking will not proceed without your explicit confirmation.</p>
+
+<p><strong>Need Help?</strong></p>
+<p>If you have questions about account linking or need assistance, our support team is here to help. You can reach us through your dashboard or our documentation.</p>
+
+<p>Best regards,<br>
+The sBTC Payment Gateway Security Team</p>

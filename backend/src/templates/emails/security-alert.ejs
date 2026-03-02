@@ -1,0 +1,87 @@
+<div style="padding: 20px; background-color: #f8f9fa; border-radius: 8px; margin: 20px 0;">
+  <h2 style="color: #dc3545; margin-bottom: 20px;">🔒 Security Alert</h2>
+  
+  <p>Hello <%= merchantName %>,</p>
+  
+  <p>We're writing to inform you about an important security event on your sBTC Payment Gateway account:</p>
+  
+  <div style="background-color: #fff3cd; border: 1px solid #ffeaa7; border-radius: 4px; padding: 15px; margin: 20px 0;">
+    <strong style="color: #856404;"><%= alertType %></strong>
+  </div>
+
+  <% if (timestamp) { %>
+    <p><strong>Time:</strong> <%= new Date(timestamp).toLocaleString() %></p>
+  <% } %>
+
+  <% if (action) { %>
+    <p><strong>Action:</strong> <%= action %></p>
+  <% } %>
+
+  <% if (severity) { %>
+    <p><strong>Severity:</strong> <%= severity %></p>
+  <% } %>
+
+  <% if (message) { %>
+    <div style="background-color: #e7f3ff; border-left: 4px solid #007bff; padding: 15px; margin: 20px 0;">
+      <%= message %>
+    </div>
+  <% } %>
+
+  <% if (backupCodes && backupCodes.length > 0) { %>
+    <div style="background-color: #d4edda; border: 1px solid #c3e6cb; border-radius: 4px; padding: 15px; margin: 20px 0;">
+      <h3 style="color: #155724; margin-top: 0;">New Backup Codes:</h3>
+      <p style="font-family: monospace; color: #155724;">
+        <% backupCodes.forEach(function(code) { %>
+          <%= code %><br>
+        <% }); %>
+      </p>
+      <p style="color: #856404; font-size: 14px; margin-bottom: 0;">
+        <strong>Important:</strong> Store these codes in a safe place. Each code can only be used once.
+      </p>
+    </div>
+  <% } %>
+
+  <% if (recoveryUrl) { %>
+    <div style="text-align: center; margin: 30px 0;">
+      <a href="<%= recoveryUrl %>" 
+         style="background-color: #dc3545; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; display: inline-block;">
+        Complete Recovery Process
+      </a>
+    </div>
+    <% if (expiresIn) { %>
+      <p style="color: #6c757d; font-size: 14px; text-align: center;">
+        This link expires in <%= expiresIn %>.
+      </p>
+    <% } %>
+  <% } %>
+
+  <% if (warning) { %>
+    <div style="background-color: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; padding: 15px; margin: 20px 0;">
+      <strong style="color: #721c24;">⚠️ Warning:</strong>
+      <p style="color: #721c24; margin: 5px 0 0 0;"><%= warning %></p>
+    </div>
+  <% } %>
+
+  <% if (actions && actions.length > 0) { %>
+    <h3>Actions Taken:</h3>
+    <ul>
+      <% actions.forEach(function(action) { %>
+        <li><%= action %></li>
+      <% }); %>
+    </ul>
+  <% } %>
+
+  <% if (recommendation) { %>
+    <div style="background-color: #e7f3ff; border-left: 4px solid #007bff; padding: 15px; margin: 20px 0;">
+      <strong>Recommendation:</strong> <%= recommendation %>
+    </div>
+  <% } %>
+
+  <p>If you did not initiate this action or have any concerns, please contact our support team immediately.</p>
+
+  <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #dee2e6;">
+    <p style="color: #6c757d; font-size: 14px; margin: 0;">
+      This is an automated security notification from sBTC Payment Gateway.
+    </p>
+  </div>
+</div>

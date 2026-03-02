@@ -1,0 +1,38 @@
+<h2>Email Verification Successful ✅</h2>
+
+<p>Hi <%= merchantName %>,</p>
+
+<p>Great news! Your email address has been successfully verified. Your sBTC Payment Gateway account is now active and ready to use.</p>
+
+<p>You can now access your dashboard and start setting up Bitcoin payments for your business:</p>
+
+<a href="<%= dashboardUrl %>" class="btn">Go to Dashboard</a>
+
+<p><strong>Quick Start Guide:</strong></p>
+<ol style="margin: 20px 0; padding-left: 20px;">
+    <li><strong>Generate API Keys:</strong> Create test and live API keys for your integrations</li>
+    <li><strong>Configure Webhooks:</strong> Set up webhooks to receive payment notifications</li>
+    <li><strong>Test Integration:</strong> Use our test environment to verify your setup</li>
+    <li><strong>Go Live:</strong> Switch to live mode when you're ready</li>
+</ol>
+
+<p><strong>Your API Key (Test Mode):</strong></p>
+<div class="code-block"><%= testApiKey %></div>
+
+<div class="warning">
+    <strong>🔐 Security Note:</strong> Keep your API keys secure and never share them publicly. 
+    Test keys start with "sk_test_" and live keys start with "sk_live_".
+</div>
+
+<p><strong>Useful Resources:</strong></p>
+<ul style="margin: 20px 0; padding-left: 20px;">
+    <li><a href="<%= baseUrl %>/api/docs">API Documentation</a></li>
+    <li><a href="<%= baseUrl %>/guides/integration">Integration Guide</a></li>
+    <li><a href="<%= baseUrl %>/examples">Code Examples</a></li>
+    <li><a href="<%= baseUrl %>/support">Support Center</a></li>
+</ul>
+
+<p>Welcome to the future of Bitcoin payments!</p>
+
+<p>Best regards,<br>
+The sBTC Payment Gateway Team</p>

@@ -1,0 +1,40 @@
+<h2>Welcome to sBTC Payment Gateway! 🎉</h2>
+
+<p>Hi <%= merchantName %>,</p>
+
+<p>Welcome to sBTC Payment Gateway! We're excited to help you start accepting Bitcoin payments through the revolutionary sBTC protocol.</p>
+
+<p>To get started, please verify your email address by clicking the button below:</p>
+
+<a href="<%= verificationUrl %>" class="btn">Verify Email Address</a>
+
+<p>Or copy and paste this link into your browser:</p>
+<div class="code-block"><%= verificationUrl %></div>
+
+<p><strong>Your Account Details:</strong></p>
+<ul style="margin: 20px 0; padding-left: 20px;">
+    <li><strong>Business Name:</strong> <%= merchantName %></li>
+    <li><strong>Email:</strong> <%= email %></li>
+    <li><strong>Business Type:</strong> <%= businessType %></li>
+    <% if (stacksAddress) { %>
+    <li><strong>Stacks Address:</strong> <%= stacksAddress %></li>
+    <% } %>
+</ul>
+
+<div class="warning">
+    <strong>⏰ Important:</strong> This verification link will expire in 24 hours. 
+    If you don't verify your email within this time, you'll need to register again.
+</div>
+
+<p><strong>What's Next?</strong></p>
+<ol style="margin: 20px 0; padding-left: 20px;">
+    <li>Verify your email address</li>
+    <li>Complete your business profile</li>
+    <li>Generate your API keys</li>
+    <li>Start integrating sBTC payments</li>
+</ol>
+
+<p>If you have any questions or need help getting started, our documentation and support team are here to help!</p>
+
+<p>Best regards,<br>
+The sBTC Payment Gateway Team</p>
