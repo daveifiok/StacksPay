@@ -1,0 +1,18 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: stackspay-stx-gateway
+            expected-sender: SP328EHAG4RB6MYQMBH9Z0WVTE02HD5N50MQJXHFZ
+            cost: 62756
+            path: contracts/stx-payment-gateway.clar
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.1"

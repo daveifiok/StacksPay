@@ -1,0 +1,22 @@
+{
+  "chain": "stacks",
+  "uuid": "stx-payment-contract-events",
+  "name": "STX Payment Gateway - Contract Print Events",
+  "version": 1,
+  "networks": {
+    "testnet": {
+      "if_this": {
+        "scope": "print_event",
+        "contract_identifier": "SP328EHAG4RB6MYQMBH9Z0WVTE02HD5N50MQJXHFZ.stackspay-stx-gateway",
+        "contains": "topic"
+      },
+      "then_that": {
+        "http_post": {
+          "url": "http://localhost:4000/api/chainhook/stx/events",
+          "authorization_header": "Bearer chainhook-secret-token-change-in-production"
+        }
+      },
+      "start_block": 1
+    }
+  }
+}

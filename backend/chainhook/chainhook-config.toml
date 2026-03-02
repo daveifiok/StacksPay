@@ -1,0 +1,15 @@
+[storage]
+working_dir = "chainhook-data"
+
+[network]
+mode = "testnet"
+bitcoind_rpc_url = "http://localhost:18332"
+bitcoind_rpc_username = "devnet"
+bitcoind_rpc_password = "devnet"
+stacks_node_rpc_url = "https://api.testnet.hiro.so"
+
+[limits]
+max_number_of_predicates = 100
+max_caching_duration_in_seconds = 300
+max_number_of_bitcoin_predicates = 10
+max_number_of_stacks_predicates = 50

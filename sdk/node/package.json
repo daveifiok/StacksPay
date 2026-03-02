@@ -1,0 +1,58 @@
+{
+  "name": "stacks-pay-node",
+  "version": "1.0.0",
+  "description": "Official Node.js SDK for StacksPay - Accept Bitcoin and STX payments",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "bitcoin",
+    "stacks",
+    "sbtc",
+    "payments",
+    "crypto",
+    "gateway",
+    "api",
+    "sdk",
+    "blockchain"
+  ],
+  "author": "StacksPay Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheSoftNode/sbtc-payment-gateway.git",
+    "directory": "sdk/node"
+  },
+  "bugs": {
+    "url": "https://github.com/TheSoftNode/sbtc-payment-gateway/issues"
+  },
+  "homepage": "https://stackspay.com",
+  "devDependencies": {
+    "@types/jest": "^29.5.5",
+    "@types/node": "^20.5.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "eslint": "^8.47.0",
+    "jest": "^29.6.2",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "axios": "^1.5.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

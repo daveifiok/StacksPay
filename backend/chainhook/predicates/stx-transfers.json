@@ -1,0 +1,23 @@
+{
+  "chain": "stacks",
+  "uuid": "stx-payment-transfers-testnet",
+  "name": "STX Payment Gateway - STX Transfers (testnet)",
+  "version": 1,
+  "networks": {
+    "testnet": {
+      "if_this": {
+        "scope": "stx_event",
+        "actions": [
+          "transfer"
+        ]
+      },
+      "then_that": {
+        "http_post": {
+          "url": "http://localhost:4000/api/chainhook/stx/transfers",
+          "authorization_header": "Bearer chainhook-secret-token-change-in-production"
+        }
+      },
+      "start_block": 1
+    }
+  }
+}
