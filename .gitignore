@@ -1,0 +1,242 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+resources/
+playground/
+
+# Environment files - SENSITIVE
+.env
+.env.*
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+*.env
+.envrc
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+
+# IDE files
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Python SDK specific
+sdk/python/src/*.egg-info/
+sdk/python/dist/
+sdk/python/build/
+
+# Node.js SDK specific
+sdk/node/dist/
+sdk/node/node_modules/
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Security & Secrets - DO NOT COMMIT
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+id_rsa*
+*.pub
+secrets/
+secrets.json
+config/secrets.json
+
+# Private keys and wallets - SENSITIVE
+*.wallet
+*.keystore
+mnemonic.txt
+private-keys.json
+wallet.json
+
+# API Keys and Configuration - SENSITIVE
+api-keys.json
+config/api-keys.json
+config/production.json
+config/prod.json
+
+# Chainhook data - Large files
+backend/chainhook/chainhook-data/
+chainhook-data/
+*.rocksdb/
+
+# Logs - Can be large
+backend/logs/
+logs/
+*.log
+*.log.*
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+db/
+database/
+
+# Backup files
+*.backup
+*.bak
+*.tmp
+*.swp
+
+# macOS specific - SENSITIVE
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Local configuration files
+config.local.js
+config.local.ts
+config.local.json
+
+# dotenv environment variables file
+.env
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# MongoDB
+data/
+mongodb/
+
+# Redis
+dump.rdb
+
+# Docker
+.docker/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Test files
+test-results/
+coverage/
+
+# Blockchain/Contract files
+contracts/deployments/
+contracts/.cache/
+
+# Stacks
+.clarinet/
+
+# Large files that shouldn't be committed
+*.zip
+*.tar.gz
+*.rar
+
+# API documentation generated files
+docs/generated/
+
+# SDK publishing artifacts
+sdk/*/dist/
+sdk/*/build/
+sdk/*/*.tgz
+sdk/*/*.egg
+sdk/*/package-lock.json
+sdk/*/yarn.lock
+
+# Resources directory (sensitive data, configs, etc.)
+resources/
