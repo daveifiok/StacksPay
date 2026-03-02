@@ -1,0 +1,1 @@
+// Stacks wallet hook placeholder
